@@ -13,6 +13,8 @@
 #include <iostream>
 #include "Fixed.hpp"
 
+int const	Fixed::_fractional_bits = 8;
+
 Fixed::Fixed(void)
 {
 	std::cout << "Default constructor called" << std::endl;
@@ -23,6 +25,7 @@ Fixed::Fixed(Fixed const & toCopy)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	this->_value = toCopy.getRawBits();
+}
 
 Fixed::~Fixed(void)
 {
