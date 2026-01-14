@@ -32,10 +32,11 @@ Fixed::~Fixed(void)
 	std::cout << "Destructor called" << std::endl;
 }
 
-void	Fixed::operator=(Fixed const &v)
+Fixed	Fixed::operator=(Fixed const &v)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	this->_value = v.getRawBits();
+	return (*this);
 }
 
 int	Fixed::getRawBits(void) const

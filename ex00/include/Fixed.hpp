@@ -22,7 +22,7 @@ class Fixed
 		Fixed();
 		Fixed(Fixed const &toCopy);
 		~Fixed();
-		void operator=(Fixed const &v);
+		Fixed operator=(Fixed const &v);
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
 };
