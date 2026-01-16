@@ -15,7 +15,8 @@
 
 Fixed	&Fixed::operator=(Fixed const &v)
 {
-	this->_value = v._value;
+	if (this != &v)
+		this->_value = v._value;
 	return (*this);
 }
 
@@ -111,6 +112,7 @@ Fixed	&Fixed::operator--(void)
 	return (*this);
 }
 
+//POST
 Fixed	Fixed::operator--(int)
 {
 	Fixed	ret;
